@@ -14,6 +14,7 @@ $(function(){
 		// $(".EnemiesToAttack").append(".characterChoice").children();
 		var children = $(".characterChoice").children();
 		for (var i = 0; i < children.length; i++){
+			$(children[i]).find("img").addClass("flipped");
 			$(".EnemiesToAttack").append(children[i]);
 		}
 	});
@@ -32,7 +33,8 @@ $(function(){
 
 $(function(){
 	$(".attackButton").on("click", function(){
-		// console.log(heroAttackPower, foeAttackPower);
+		$(".textArea").show();
+
 		foeHP -= heroAttackPower;
 		heroAttackPower += heroBaseAttack;
 
@@ -41,13 +43,41 @@ $(function(){
 			heroHP -= foeAttackPower;
 			$(".YourChar div").find(".HP").text(heroHP);
 
+			$(".fightInfo").html("<p>You attacked for " + heroAttackPower + " damage.</p><p>" + $(".Defender div").find(".name").text() + " attacked you for " + 
+				foeAttackPower + " damage.</p>");
+
+			if (heroHP <= 0){
+				$(".fightInfo").text("You have been defeated. Game over.");
+				$(".attackButton").hide();
+				$(".restartButton").show();
+			}
+
 
 		} else {
-			$(".Defender").empty();
+			if ($(".Defender div").length > 0){
+				$(".fightInfo").text("You have defeated " + $(".Defender div").find(".name").text() + ".");
+				$(".Defender").empty();
+			}
+
+			if ($(".EnemiesToAttack div").length === 0){
+				$(".fightInfo").text("You are victorious.")
+				$(".attackButton").hide();
+				$(".restartButton").show();
+			}
+
 		}
 
 		});
 });
+
+$(function(){
+	$(".restartButton").on("click", function(){
+		// console.log(heroAttackPower, foeAttackPower);
+		location.reload();
+
+		});
+});
+
 
 // $(function(){
 // 	$(".Defender").on("click", "div", function(){

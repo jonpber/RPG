@@ -1,36 +1,105 @@
 body {
-	background-color: #cfedff;
+	background-image: url("../images/back.jpg");
+}
+
+h1, h3, p {
+	color: white;
+	font-family:'Press Start 2P', cursive;
 }
 
 .characterChoice > div {
 	display: inline-block;
-	padding: 15px;
-	background-color: white;
+	padding: 10px;
+}
+
+.characterChoice > div > p {
+	color: white;
+	text-align: center;
 }
 
 .EnemiesToAttack > div {
 	display: inline-block;
 	padding: 15px;
-	background-color: red;
+}
+
+.EnemiesToAttack > div > p{
+	color: red;
+	text-align: center;
 }
 
 .YourChar > div {
 	display: inline-block;
 	padding: 15px;
-	background-color: green;
+}
+
+.YourChar > div > p {
+	color: green;
+	text-align: center;
 }
 
 .Defender > div {
 	display: inline-block;
 	padding: 15px;
-	background-color: black;
+
 }
 
-.attack, .counter, .attackButton {
+.Defender > div > p {
+	color: orange;
+	text-align: center;
+}
+
+.center {
+	text-align: center;
+}
+
+.attack, .counter, .attackButton, .restartButton {
 	display: none;
 }
 
 .name {
 	text-align: center;
+}
+
+.flipped {
+	display: inline-block;
+	transform: scale(-1,1);
+	-webkit-transform: scale(-1,1);
+	-moz-transform: scale(-1,1);
+	-o-transform: scale(-1,1);
+}
+
+
+.characterPool, .arena {
+	margin-left: 40px;
+	float: left;
+	background: rgba(0, 0, 0, 0.44);
+	border: 1px solid black;
+}
+
+.characterPool {
+	padding: 28px;
+	width: 850px;
+}
+
+.arena {
+	padding: 20px;
+	float: left;
+	width: 27%;
+	margin-bottom: 50px;
+
+}
+
+.textArea {
+	display: none;
+	clear: both;
+	background: rgba(0, 0, 0, 0.44);
+	border: 1px solid black;
+	margin-top: 50px;
+	text-align: center;
+	padding: 10px;
+}
+
+.character {
+	width: 150px;
 }
 
