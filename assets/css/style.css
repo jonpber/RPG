@@ -25,3 +25,12 @@ body {
 	padding: 15px;
 	background-color: black;
 }
+
+.attack, .counter, .attackButton {
+	display: none;
+}
+
+.name {
+	text-align: center;
+}
+
