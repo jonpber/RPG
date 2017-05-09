@@ -1,19 +1,17 @@
 $(function(){
-	$(".character").click(function(){
+	$(".characterChoice").children().on("click", function(){
 		$(".YourChar").append(this);
-		$(this).removeClass("character");
-		$(this).addClass("hero");
-		$("EnemiesToAttack").append(".character");
-		$(".character").addClass("enemy");
-		$(".character").removeClass("character");
+		// $(".EnemiesToAttack").append(".characterChoice").children();
+		var children = $(".characterChoice").children();
+		for (var i = 0; i < children.length; i++){
+			$(".EnemiesToAttack").append(children[i]);
+		}
 	});
 });
 
 $(function(){
-	$(".enemy").click(function(){
+	$(".EnemiesToAttack").children().on("click", function(){
 		$(".Defender").append(this);
-		$(this).removeClass("enemy");
-		$(this).addClass("defender");
 	});
 });
 
