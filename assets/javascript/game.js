@@ -3,6 +3,13 @@ var heroBaseAttack = 0;
 var heroAttackPower = 0;
 var foeHP = 0;
 var foeAttackPower = 0;
+var fightAudio = new Audio("assets/sounds/LSwall01.wav");
+var images = ['assets/images/back.jpg',
+		'assets/images/hoth.png',
+		'assets/images/RsyHRBx.jpg',]
+		
+var imagePlace = 0;
+
 
 
 $(function(){
@@ -19,9 +26,7 @@ $(function(){
 			$(".EnemiesToAttack").append(children[i]);
 		}
 	});
-});
 
-$(function(){
 	$(".EnemiesToAttack").on("click", "div", function(){
 		if ($(".Defender div").length === 0){
 			foeHP = $(this).find(".HP").text();
@@ -30,11 +35,21 @@ $(function(){
 			$(".attackButton").show();
 		}
 		});
-});
 
-$(function(){
+	function preload(arrayOfImages) {
+	    $(arrayOfImages).each(function(){
+	        $('<img/>')[0].src = this;
+	        // Alternatively you could use:
+	        // (new Image()).src = this;
+	    });
+	}
+
+	preload(images)
+
 	$(".attackButton").on("click", function(){
 		$(".textArea").show();
+
+		fightAudio.play();
 
 		foeHP -= heroAttackPower;
 		heroAttackPower += heroBaseAttack;
@@ -70,21 +85,34 @@ $(function(){
 		}
 
 		});
-});
 
-$(function(){
 	$(".restartButton").on("click", function(){
 		// console.log(heroAttackPower, foeAttackPower);
 		location.reload();
 
 		});
+
+
+	$("#theme1").on("click", function(){
+		$("body").css("background-image", "url(" +images[0] + ")");
+	});
+
+	$("#theme2").on("click", function(){
+		$("body").css("background-image", "url(" +images[1] + ")");
+	});
+
+	$("#theme3").on("click", function(){
+		$("body").css("background-image", "url(" +images[2] + ")");
+	});
+
+
+
+	$(".right").on("click", function(){
+		imagePlace += 1;
+		$("body").css("background-image", "url(" +images[imagePlace % images.length] + ")");
+
+	});
+
+
 });
-
-
-// $(function(){
-// 	$(".Defender").on("click", "div", function(){
-// 		$(".Defender").empty();
-// 		});
-// });
-
 
