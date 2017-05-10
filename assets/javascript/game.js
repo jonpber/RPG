@@ -12,6 +12,7 @@ $(function(){
 		heroBaseAttack = heroAttackPower;
 		$(".YourChar").append(this);
 		// $(".EnemiesToAttack").append(".characterChoice").children();
+		$("h3").toggle();
 		var children = $(".characterChoice").children();
 		for (var i = 0; i < children.length; i++){
 			$(children[i]).find("img").addClass("flipped");
@@ -37,17 +38,18 @@ $(function(){
 
 		foeHP -= heroAttackPower;
 		heroAttackPower += heroBaseAttack;
+		$fightText = $(".fightInfo");
 
 		if (foeHP > 0){
 			$(".Defender div").find(".HP").text(foeHP);
 			heroHP -= foeAttackPower;
 			$(".YourChar div").find(".HP").text(heroHP);
 
-			$(".fightInfo").html("<p>You attacked for " + (heroAttackPower - heroBaseAttack) + " damage.</p><p>" + $(".Defender div").find(".name").text() + " attacked you for " + 
+			$($fightText).html("<p>You attacked for " + (heroAttackPower - heroBaseAttack) + " damage.</p><p>" + $(".Defender div").find(".name").text() + " attacked you for " + 
 				foeAttackPower + " damage.</p>");
 
 			if (heroHP <= 0){
-				$(".fightInfo").text("You have been defeated. Game over.");
+				$($fightText).text("You have been defeated. Game over.");
 				$(".attackButton").hide();
 				$(".restartButton").show();
 			}
@@ -55,12 +57,12 @@ $(function(){
 
 		} else {
 			if ($(".Defender div").length > 0){
-				$(".fightInfo").text("You have defeated " + $(".Defender div").find(".name").text() + ".");
+				$($fightText).text("You have defeated " + $(".Defender div").find(".name").text() + ".");
 				$(".Defender").empty();
 			}
 
 			if ($(".EnemiesToAttack div").length === 0){
-				$(".fightInfo").text("You are victorious.")
+				$($fightText).text("You are victorious.")
 				$(".attackButton").hide();
 				$(".restartButton").show();
 			}

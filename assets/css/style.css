@@ -2,9 +2,22 @@ body {
 	background-image: url("../images/back.jpg");
 }
 
+@font-face {
+	font-family: starJedi;
+	src: url("../fonts/STARWARS.woff");
+}
+
 h1, h3, h4, p {
 	color: white;
-	font-family:'Press Start 2P', cursive;
+	font-family: starJedi;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+p, h4 {
+	font-size: 18px;
 }
 
 .characterChoice > div {
@@ -52,7 +65,7 @@ h1, h3, h4, p {
 	text-align: center;
 }
 
-.attack, .counter, .attackButton, .restartButton {
+.attack, .counter, .attackButton, .restartButton, .enemyH3 {
 	display: none;
 }
 
@@ -84,7 +97,7 @@ h1, h3, h4, p {
 .arena {
 	padding: 20px;
 	height: 400px;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 	position: relative;
 
 }
@@ -117,7 +130,7 @@ h1, h3, h4, p {
 }
 
 button {
-	font-family:'Press Start 2P', cursive;
+	font-family: starJedi;
 }
 
 .buttons {
