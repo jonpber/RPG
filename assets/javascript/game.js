@@ -43,7 +43,7 @@ $(function(){
 			heroHP -= foeAttackPower;
 			$(".YourChar div").find(".HP").text(heroHP);
 
-			$(".fightInfo").html("<p>You attacked for " + heroAttackPower + " damage.</p><p>" + $(".Defender div").find(".name").text() + " attacked you for " + 
+			$(".fightInfo").html("<p>You attacked for " + (heroAttackPower - heroBaseAttack) + " damage.</p><p>" + $(".Defender div").find(".name").text() + " attacked you for " + 
 				foeAttackPower + " damage.</p>");
 
 			if (heroHP <= 0){

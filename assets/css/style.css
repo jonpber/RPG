@@ -2,7 +2,7 @@ body {
 	background-image: url("../images/back.jpg");
 }
 
-h1, h3, p {
+h1, h3, h4, p {
 	color: white;
 	font-family:'Press Start 2P', cursive;
 }
@@ -33,7 +33,7 @@ h1, h3, p {
 }
 
 .YourChar > div > p {
-	color: green;
+	color: #14c614;;
 	text-align: center;
 }
 
@@ -69,29 +69,28 @@ h1, h3, p {
 }
 
 
-.characterPool, .arena {
-	margin-left: 40px;
-	float: left;
+.characterPool, .arena, .textArea {
+	margin: auto;
 	background: rgba(0, 0, 0, 0.44);
 	border: 1px solid black;
+	width: 850px;
 }
 
 .characterPool {
 	padding: 28px;
-	width: 850px;
+	margin-bottom: 25px;
 }
 
 .arena {
 	padding: 20px;
-	float: left;
-	width: 27%;
+	height: 400px;
 	margin-bottom: 50px;
+	position: relative;
 
 }
 
 .textArea {
 	display: none;
-	clear: both;
 	background: rgba(0, 0, 0, 0.44);
 	border: 1px solid black;
 	margin-top: 50px;
@@ -103,3 +102,31 @@ h1, h3, p {
 	width: 150px;
 }
 
+.heroSpace, .defenderSpace, .buttons {
+	z-index: 1;
+}
+
+.heroSpace {
+	float: left;
+	margin-left: 25%;
+}
+
+.defenderSpace {
+	float: right;
+	margin-right: 25%;
+}
+
+button {
+	font-family:'Press Start 2P', cursive;
+}
+
+.buttons {
+	clear: both;
+}
+
+.back {
+	position: absolute;
+	left: 45px;
+	bottom: -5px;
+	z-index: -1;
+}
