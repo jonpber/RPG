@@ -4,7 +4,7 @@ var heroAttackPower = 0;
 var foeHP = 0;
 var foeAttackPower = 0;
 var fightAudio = new Audio("assets/sounds/LSwall01.wav");
-var images = ['assets/images/back.jpg',
+var images = ['assets/images/back0.png',
 		'assets/images/hoth.png',
 		'assets/images/back.png',]
 		
