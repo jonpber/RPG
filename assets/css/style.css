@@ -1,0 +1,214 @@
+body {
+	background-image: url("../images/back.jpg");
+}
+
+@font-face {
+	font-family: starJedi;
+	src: url("../fonts/DISTGRG_.ttf");
+}
+
+h1, h2, h3, h4, p, a, .rightX {
+	color: white;
+	font-family: starJedi;
+	letter-spacing: 3px;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+h2 {
+	font-size: 25px;
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+}
+
+h3 {
+	font-size: 23px;
+}
+
+p, h4 {
+	font-size: 18px;
+}
+
+.characterChoice > div {
+	display: inline-block;
+	padding: 10px;
+}
+
+.characterChoice > div > p {
+	color: white;
+	text-align: center;
+}
+
+.EnemiesToAttack > div {
+	display: inline-block;
+	padding: 15px;
+}
+
+.EnemiesToAttack > div > p{
+	color: red;
+	text-align: center;
+}
+
+.YourChar > div {
+	display: inline-block;
+	padding: 15px;
+	width: 180px;
+}
+
+.YourChar > div > img {
+	width: 150px;
+}
+
+.YourChar > div > p {
+	color: #14c614;;
+	text-align: center;
+}
+
+.Defender > div {
+	display: inline-block;
+	padding: 15px;
+	width: 180px;
+}
+
+
+.Defender > div > img {
+	width: 150px;
+}
+
+.Defender > div > p {
+	color: orange;
+	text-align: center;
+}
+
+.center {
+	text-align: center;
+}
+
+.attack, .counter, .attackButton, .restartButton, .enemyH3 {
+	display: none;
+}
+
+.name {
+	text-align: center;
+	margin-bottom: 0;
+}
+
+
+.characterPool, .arena, .tutorial {
+	margin: auto;
+	background: rgba(0, 0, 0, 0.73);
+	border: 1px solid black;
+	width: 850px;
+}
+
+.characterPool {
+	padding: 20px;
+	margin-bottom: 25px;
+}
+
+.arena {
+	padding: 20px;
+	height: 440px;
+	margin-bottom: 20px;
+}
+
+.textArea {
+	margin: auto;
+	border: 1px solid black;
+	display: none;
+	border: none;
+	text-align: center;
+	padding: 10px;
+}
+
+.character {
+	width: 145px;
+}
+
+/*.heroSpace, .defenderSpace, .buttons {
+	z-index: 1;
+}*/
+
+.heroSpace {
+	float: left;
+	margin-left: 25%;
+}
+
+.defenderSpace {
+	float: right;
+	margin-right: 25%;
+}
+
+button, a {
+	font-family: starJedi;
+	font-size: 21px;
+}
+
+
+.buttons {
+	clear: both;
+}
+
+.back {
+	position: absolute;
+	left: 45px;
+	bottom: -5px;
+	z-index: -1;
+}
+
+.arrows {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	padding: 10px;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.char {
+	width: 100px;
+	border: 5px solid white;
+}
+
+.navbar-brand {
+	font-size: 32px;
+}
+
+.container-fluid {
+    background: currentColor;
+}
+
+.tutorial {
+	height: 780px;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.87);
+	padding: 40px;
+}
+
+.abs {
+	width: 100%;
+	position: absolute;
+	display: none;
+}
+
+.rightX {
+	text-align: right;
+	font-size: 25px;
+}
+
+h2:hover {
+	opacity: 0.5;
+}
+
+.rightX:hover {
+	opacity: 0.5;
+}
