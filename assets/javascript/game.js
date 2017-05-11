@@ -71,6 +71,7 @@ $(function(){
 
 		} else {
 			if ($(".Defender div").length > 0){
+				fightAudio.play();
 				$($fightText).text("You have defeated " + $(".Defender div").find(".name").text() + ".");
 				$(".Defender").empty();
 			}
@@ -110,6 +111,16 @@ $(function(){
 		imagePlace += 1;
 		$("body").css("background-image", "url(" +images[imagePlace % images.length] + ")");
 
+	});
+
+	$("h2").on("click", function(){
+		$(".abs").show();
+		$("h2").hide();
+	});
+
+	$(".rightX").on("click", function(){
+		$(".abs").hide();
+		$("h2").show();
 	});
 
 
