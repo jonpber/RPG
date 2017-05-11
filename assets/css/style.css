@@ -20,8 +20,8 @@ h1 {
 h2 {
 	font-size: 25px;
 	position: absolute;
-	bottom: 10px;
 	left: 10px;
+	bottom: 10px;
 }
 
 h3 {
@@ -128,9 +128,6 @@ p, h4 {
 	width: 150px;
 }
 
-/*.heroSpace, .defenderSpace, .buttons {
-	z-index: 1;
-}*/
 
 .heroSpace {
 	float: left;
@@ -152,20 +149,6 @@ button, a {
 
 .buttons {
 	clear: both;
-}
-
-.back {
-	position: absolute;
-	left: 45px;
-	bottom: -5px;
-	z-index: -1;
-}
-
-.arrows {
-	width: 100%;
-	position: absolute;
-	top: 50%;
-	padding: 10px;
 }
 
 .left {
@@ -220,10 +203,6 @@ h2:hover {
 		width: 550px;
 	}
 
-	a {
-		font-size: 15px;
-	}
-
 	.YourChar > div > img {
 		width: 100px;
 	}
@@ -244,6 +223,99 @@ h2:hover {
 	.defenderSpace {
 		margin-right: 10%;
 		width: 180px;
+	}
+
+	.navbar-header {
+		float: none;
+	}
+
+	.navbar-toggle {
+		display: block;
+	}
+
+	.navbar-collapse {
+		border-top: 1px solid transparent;
+		box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+	}
+
+	.navbar-collapse.collapse {
+		display: none!important;
+	}
+
+	.navbar-nav {
+		float: none!important;
+		margin: 7.5px -15px;
+		overflow: hidden;
+	}
+
+	.navbar-nav>li {
+		float: none;
+		text-align: center;
+	}
+
+	.navbar-nav>li>a {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	.navbar-text {
+		float: none;
+		margin: 15px 0;
+	}
+
+	/* since 3.1.0 */
+	.navbar-collapse.collapse.in { 
+		display: block!important;
+	}
+
+	.collapsing {
+		overflow: hidden!important;
+	}
+
+}
+
+@media screen and (max-width: 640px){
+	.characterPool, .arena, .tutorial {
+		width: 100%;
+	}
+
+	.character {
+		width: 139px;
+	}
+
+	.heroSpace {
+		margin-left: -10%;
+		width: 140px;
+	}
+
+	.defenderSpace {
+		margin-right: -10%;
+		width: 140px;
+	}
+
+	.navbar-brand {
+		font-size: 15px;
+	}
+
+	.YourChar > div {
+		display: inline-block;
+		padding: 15px;
+		width: 150px;
+	}
+
+	.YourChar > div {
+		width: 140px;
+	}
+
+	.Defender > div {
+		width: 140px;
+	}
+
+	h2 {
+	font-size: 25px;
+	position: absolute;
+	left: 10px;
+	bottom: auto;
 	}
 
 }
