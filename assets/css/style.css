@@ -76,6 +76,7 @@ p, h4 {
 
 .name {
 	text-align: center;
+	margin-bottom: 0;
 }
 
 .flipped {
@@ -135,11 +136,9 @@ p, h4 {
 
 button, a {
 	font-family: starJedi;
-}
-
-a {
 	font-size: 20px;
 }
+
 
 .buttons {
 	clear: both;
@@ -167,10 +166,15 @@ a {
 	float: right;
 }
 
-/*.charSprite {
-	width: 50%;
-}*/
+.char {
+	width: 100px;
+	border: 5px solid white;
+}
 
 .navbar-brand {
-	font-size: 25px;
+	font-size: 32px;
+}
+
+.container-fluid {
+    background: currentColor;
 }

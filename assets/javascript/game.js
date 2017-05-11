@@ -6,7 +6,7 @@ var foeAttackPower = 0;
 var fightAudio = new Audio("assets/sounds/LSwall01.wav");
 var images = ['assets/images/back.jpg',
 		'assets/images/hoth.png',
-		'assets/images/RsyHRBx.jpg',]
+		'assets/images/back.png',]
 		
 var imagePlace = 0;
 
@@ -22,7 +22,7 @@ $(function(){
 		$("h3").toggle();
 		var children = $(".characterChoice").children();
 		for (var i = 0; i < children.length; i++){
-			$(children[i]).find("img").addClass("flipped");
+			// $(children[i]).find("img").addClass("flipped");
 			$(".EnemiesToAttack").append(children[i]);
 		}
 	});
@@ -49,13 +49,12 @@ $(function(){
 	$(".attackButton").on("click", function(){
 		$(".textArea").show();
 
-		fightAudio.play();
-
 		foeHP -= heroAttackPower;
 		heroAttackPower += heroBaseAttack;
 		$fightText = $(".fightInfo");
 
 		if (foeHP > 0){
+			fightAudio.play();
 			$(".Defender div").find(".HP").text(foeHP);
 			heroHP -= foeAttackPower;
 			$(".YourChar div").find(".HP").text(heroHP);
