@@ -4,11 +4,14 @@ var heroAttackPower = 0;
 var foeHP = 0;
 var foeAttackPower = 0;
 var fightAudio = new Audio("assets/sounds/LSwall01.wav");
-var images = ['assets/images/back.jpg',
+var images = ['assets/images/back0.png',
 		'assets/images/hoth.png',
 		'assets/images/back.png',]
 		
 var imagePlace = 0;
+
+var victorySound = new Audio ("assets/sounds/theme.mp3");
+var lossSound = new Audio ("assets/sounds/imperial_march.wav");
 
 
 
@@ -63,6 +66,8 @@ $(function(){
 				foeAttackPower + " damage.</p>");
 
 			if (heroHP <= 0){
+				fightAudio.pause();
+				lossSound.play();
 				$($fightText).text("You have been defeated. Game over.");
 				$(".attackButton").hide();
 				$(".restartButton").show();
@@ -77,6 +82,8 @@ $(function(){
 			}
 
 			if ($(".EnemiesToAttack div").length === 0){
+				fightAudio.pause();
+				victorySound.play();
 				$($fightText).text("You are victorious.")
 				$(".attackButton").hide();
 				$(".restartButton").show();
