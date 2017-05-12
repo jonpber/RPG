@@ -20,22 +20,30 @@ $(function(){
 		heroHP = $(this).find(".HP").text();
 		heroAttackPower = parseInt($(this).attr("data-attack"));
 		heroBaseAttack = heroAttackPower;
-		$(".YourChar").append(this);
+		$(this).fadeOut("fast", function(){
+			$(".YourChar").append(this);
+			$("h3").toggle();
+			var children = $(".characterChoice").children();
+			for (var i = 0; i < children.length; i++){
+				// $(children[i]).find("img").addClass("flipped");
+				$(".EnemiesToAttack").append(children[i]);
+			}
+			$(this).fadeIn("fast");
+		});
+
 		// $(".EnemiesToAttack").append(".characterChoice").children();
-		$("h3").toggle();
-		var children = $(".characterChoice").children();
-		for (var i = 0; i < children.length; i++){
-			// $(children[i]).find("img").addClass("flipped");
-			$(".EnemiesToAttack").append(children[i]);
-		}
 	});
 
 	$(".EnemiesToAttack").on("click", "div", function(){
 		if ($(".Defender div").length === 0){
 			foeHP = $(this).find(".HP").text();
 			foeAttackPower = $(this).attr("data-counter");
-			$(".Defender").append(this);
-			$(".attackButton").show();
+			$(this).fadeOut("fast", function(){
+				$(".Defender").append(this);
+				$(".attackButton").show();
+				$(this).fadeIn("fast");
+			});
+
 		}
 		});
 
@@ -69,6 +77,7 @@ $(function(){
 				fightAudio.pause();
 				lossSound.play();
 				$($fightText).text("You have been defeated. Game over.");
+				$(".YourChar div").fadeOut("fast");
 				$(".attackButton").hide();
 				$(".restartButton").show();
 			}
@@ -78,7 +87,10 @@ $(function(){
 			if ($(".Defender div").length > 0){
 				fightAudio.play();
 				$($fightText).text("You have defeated " + $(".Defender div").find(".name").text() + ".");
-				$(".Defender").empty();
+				$(".Defender div").fadeOut("fast", function(){
+					$(".Defender").empty();
+				});
+
 			}
 
 			if ($(".EnemiesToAttack div").length === 0){
