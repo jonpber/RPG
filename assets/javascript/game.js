@@ -91,6 +91,7 @@ $(function(){
 					$(".Defender").empty();
 				});
 
+
 			}
 
 			if ($(".EnemiesToAttack div").length === 0){
