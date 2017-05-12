@@ -18,7 +18,7 @@ var lossSound = new Audio ("assets/sounds/imperial_march.wav");
 $(function(){
 	$(".characterChoice").on("click", "div", function(){
 		heroHP = $(this).find(".HP").text();
-		heroAttackPower = parseInt($(this).find(".attack").text());
+		heroAttackPower = parseInt($(this).attr("data-attack"));
 		heroBaseAttack = heroAttackPower;
 		$(".YourChar").append(this);
 		// $(".EnemiesToAttack").append(".characterChoice").children();
@@ -33,7 +33,7 @@ $(function(){
 	$(".EnemiesToAttack").on("click", "div", function(){
 		if ($(".Defender div").length === 0){
 			foeHP = $(this).find(".HP").text();
-			foeAttackPower = $(this).find(".counter").text();
+			foeAttackPower = $(this).attr("data-counter");
 			$(".Defender").append(this);
 			$(".attackButton").show();
 		}
