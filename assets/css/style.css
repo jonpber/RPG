@@ -87,7 +87,7 @@ p, h4 {
 	text-align: center;
 }
 
-.attack, .counter, .attackButton, .restartButton, .enemyH3 {
+.attackButton, .restartButton, .enemyH3 {
 	display: none;
 }
 
