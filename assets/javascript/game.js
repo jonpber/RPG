@@ -3,7 +3,7 @@ var heroBaseAttack = 0;
 var heroAttackPower = 0;
 var foeHP = 0;
 var foeAttackPower = 0;
-var fightAudio = new Audio("assets/sounds/lsabhit.wav");
+var fightAudio = new Audio("https://raw.githubusercontent.com/jonpber/RPG/master/assets/sounds/lsabhit.WAV");
 var images = ['assets/images/back0.png',
 		'assets/images/hoth.png',
 		'assets/images/back.png',]
