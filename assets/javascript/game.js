@@ -74,7 +74,6 @@ $(function(){
 				foeAttackPower + " damage.</p>");
 
 			if (heroHP <= 0){
-				fightAudio.pause();
 				lossSound.play();
 				$($fightText).text("You have been defeated. Game over.");
 				$(".YourChar div").fadeOut("fast");
@@ -95,7 +94,6 @@ $(function(){
 			}
 
 			if ($(".EnemiesToAttack div").length === 0){
-				fightAudio.pause();
 				victorySound.play();
 				$($fightText).text("You are victorious.")
 				$(".attackButton").hide();
