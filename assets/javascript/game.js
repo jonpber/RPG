@@ -120,7 +120,7 @@ $(function(){
 	});
 
 	$("#theme3").on("click", function(){
-		$("body").css("background-image", "url(" +images[2] + ")");
+		$("body").css("background-image", "url(" +images[2] + ")").css("background-color", "#8c4934");
 	});
 
 
