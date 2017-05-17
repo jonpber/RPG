@@ -1,21 +1,22 @@
-var heroHP = 0;
-var heroBaseAttack = 0;
-var heroAttackPower = 0;
-var foeHP = 0;
-var foeAttackPower = 0;
-var fightAudio = new Audio("https://raw.githubusercontent.com/jonpber/RPG/master/assets/sounds/lsabhit.WAV");
-var images = ['assets/images/back0.png',
-		'assets/images/hoth.png',
-		'assets/images/back.png',]
-		
-var imagePlace = 0;
-
-var victorySound = new Audio ("assets/sounds/theme.mp3");
-var lossSound = new Audio ("assets/sounds/imperial_march.wav");
 
 
 
 $(function(){
+	var heroHP = 0;
+	var heroBaseAttack = 0;
+	var heroAttackPower = 0;
+	var foeHP = 0;
+	var foeAttackPower = 0;
+	var fightAudio = new Audio("https://raw.githubusercontent.com/jonpber/RPG/master/assets/sounds/lsabhit.WAV");
+	var images = ['assets/images/back0.png',
+			'assets/images/hoth.png',
+			'assets/images/back.png',]
+			
+	var imagePlace = 0;
+
+	var victorySound = new Audio ("assets/sounds/theme.mp3");
+	var lossSound = new Audio ("assets/sounds/imperial_march.wav");
+
 	$(".characterChoice").on("click", "div", function(){
 		heroHP = $(this).find(".HP").text();
 		heroAttackPower = parseInt($(this).attr("data-attack"));
@@ -112,11 +113,11 @@ $(function(){
 
 
 	$("#theme1").on("click", function(){
-		$("body").css("background-image", "url(" +images[0] + ")");
+		$("body").css("background-image", "url(" +images[0] + ")").css("background-color", "#272e34");
 	});
 
 	$("#theme2").on("click", function(){
-		$("body").css("background-image", "url(" +images[1] + ")");
+		$("body").css("background-image", "url(" +images[1] + ")").css("background-color", "#c5e3fb");
 	});
 
 	$("#theme3").on("click", function(){
