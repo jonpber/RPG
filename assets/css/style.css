@@ -5,6 +5,7 @@ html {
 body {
 	background-image: url("../images/back0.png");
 	background-repeat: no-repeat;
+	background-size: cover;
 	background-color: #272e34;
 }
 
