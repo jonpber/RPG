@@ -112,18 +112,9 @@ $(function(){
 		});
 
 
-	$("#theme1").on("click", function(){
-		$("body").css("background-image", "url(" +images[0] + ")").css("background-color", "#272e34");
+	$(".theme").on("click", function(){
+		$("body").css("background-image", "url(" +images[$(this).attr("data-val")] + ")").css("background-color", "#272e34");
 	});
-
-	$("#theme2").on("click", function(){
-		$("body").css("background-image", "url(" +images[1] + ")").css("background-color", "#c5e3fb");
-	});
-
-	$("#theme3").on("click", function(){
-		$("body").css("background-image", "url(" +images[2] + ")").css("background-color", "#8c4934");
-	});
-
 
 
 	$(".right").on("click", function(){
